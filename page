@@ -1,0 +1,548 @@
+<!Doctype html>
+<html>
+<head>
+<title>too7</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script sec="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+*{
+font-family: 'Poppins', sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:Smooth;
+text-decoration:none;
+scroll-behavior:Smooth;
+}
+
+section{
+   padding:80px 100px;
+}
+
+.sidebar{
+   list-style:none;
+   position:fixed;
+   left:-250px;
+   width:250px;
+   height:100%;
+   background-color:#042331;
+}
+.sidebar header{
+   font-size:25px;
+   color:white;
+   text-align:center;
+   line-height:80px; 
+   background-color:#063146;
+   user-select:none;
+} 
+.sidebar ul a{
+   display:block;
+   height:100%;
+   width:100%;
+   line-height:100px;
+   padding-left:30px;
+   font-size:18px;
+   color:white;
+   transition: 0.6s ease;
+}
+.sidebar li:hover a{
+   padding-left:50px;
+   transform:scale(1.1);
+}
+
+#check{
+   display:none;
+}
+label #btn,label #cancel{
+   position:absolute;
+   cursor:pointer;
+   background:#042331;
+   border-radius:3px;
+    position:fixed; 
+  
+}
+
+label #btn{
+   left:14px;
+   top:15px;
+   font-size:35px;
+   color:white;
+   padding:6px 12px;
+   transition:0.7s ease;
+   
+}
+label #cancel{
+   z-index:1111;
+   left:-210px;
+   top:15px;
+   font-size:25px;
+   color:#0a5275;
+   padding:4px 9px;
+   transition:0.7s ease;
+}
+#check:checked ~ .sidebar{
+   left:0;
+   transition:all 0.7s ease;
+}
+
+#check:checked ~ label #btn{
+   left:-250px;
+   apacity:0;
+   pointer-events:none;
+}
+#check:checked ~ label #cancel{
+   left:210px;
+   transition:0.7s ease;
+}
+
+.intro{
+   width:100%;
+   min-hight:100vh;
+   line-height:40px; 
+   padding:370px ;
+   background:url(file:///C:/Users/Lenovo%20R/Desktop/too7/too72.jpg)no-repeat;
+   background-size:880px 800px;
+   background-attachment:fixed;
+   background-position:right;
+   }
+
+.intro h1{
+   font-size:35px;
+   color:#626567;
+    user-select:none;
+}
+.intro h3{
+     font-size:22px;
+   color:#283747;
+   user-select:none;
+}
+.intro p{
+ font-size:16px;
+   color:#283747;
+   user-select:none;
+}
+.about-background{
+  display:flix;
+  padding:100px 100px;
+
+}
+.about{ 
+   background:url(file:///C:/Users/Lenovo%20R/Desktop/too7/logos/58c76c2a-5446-47b2-9341-1c7e52b6d7c2.jpg)no-repeat;
+   width:100%;  
+   background-size:100%;
+   background-attachment:fixed;
+   background-position:center;
+}
+.about h1{ 
+
+    display:flex;
+    justify-content:center;
+	font-size:35px;
+	color:white;
+    user-select:none;
+} 
+.about p{
+dispaly:flex;
+padding:280px;
+width:100%;
+    max-hight:100vh;
+    color:white;
+   	font-size:23px;
+	user-select:none;
+
+	}
+
+.projects{
+background-color:#042331;
+}
+.projects h1{
+   display:flex;
+   justify-content:center;
+   color:white;
+  font-size:35px;
+} 
+.content{
+    display:flex;
+   justify-content:center;
+   flex-direction:row;
+   flex-wrap:wrap;
+}
+.projects .content{
+  margin-top:40px;
+}
+.cards{
+  margin:12px;
+  background-color:#063146;
+  border:1px solid white;
+  min-hight:100px;
+  width:300px;
+  overflow:hidden;
+  border-radius:30px;
+  transition:0.7s ease;
+}
+.cards:hover{
+transform: scale(1.1);
+}
+.cards:hover img{
+ opacity:0.9;
+}
+.cards img{
+   width:100%;
+
+}
+.info{
+  padding:15px;
+
+}
+.category{
+   font-size:16px;
+   color:white;
+}
+.title{
+  display:flex;
+  justify-content:space-between;
+   font-wight:500;
+   margin-top:10px;
+}
+.link{
+  padding:5px;
+   border:1px solid white;
+   border-radius:20px;
+ text-decoration:none;
+ color:#FBEEE6;
+
+}
+.contacts{
+   background-color:white;
+
+}
+.contacts-title{
+   display:flex;
+   justify-content:center;
+   font-size:35px;
+   color:#063146;
+}
+
+.contacts-icons{
+   display:flex;
+   justify-content:center;
+   
+   font-size:40px;
+   color:white;
+   margin:50px;
+}
+.num{
+  
+   min-height:100px;
+   display:flex;
+   justify-content:center;
+   font-size:30px;
+
+ color:white;
+}
+.num:hover{
+  color :#F1948A;
+  
+}
+.email{
+ display:flex;
+   justify-content:center;
+   min-height:100px;
+   font-size:20px;
+ color:white;
+}
+.email:hover{
+  color :#F1948A;
+  
+}
+</style>
+<body>
+<input type="checkbox" id="check">
+<label for="check">
+<i class="fa fa-bars" id="btn"></i>
+<i class="fa fa-close" id="cancel"></i>
+</label>
+<div class="sidebar">
+<div >
+  <header> Navegation </header>
+</div>
+<div >
+<ul>
+     <li>   <a href="#ABOUT">ABOUT</a>             </li>
+     <li>   <a href="#projects">PROJECTS</a>       </li>
+     <li>   <a href="#contacts">CONTACTS</a>       </li>
+  <ul>
+</div>   
+</div>
+
+<section class="intro">
+
+<h3>Hi,i'm ahmed mostafa</h2>
+<h1>designer & photographer</h1>
+<p>i'm a logos's designer and editor let's work with my </p>
+
+</section>
+
+<section class="about" id="ABOUT">
+    <div class="about-background">
+	<h1>about</h1>     
+    <p>- Whether you need a beauty logo, a logo for your real estate business or even a logo for  your new startup 
+<br>- Edit photos with high quality and  professionalism
+<br>- Find what suits you and choose the best for  you at the highest level !</p>         
+     </div> 
+</section>
+
+<section class="projects" id="projects">
+
+    <h1>Projects</h1>
+<div class="content">
+
+  <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/logos/b7d812d1-0269-4328-bd40-984d6ef1d11a.jpg">
+	</div>
+	<div class="info">
+	<p class="category">eye modern design</p>
+	
+	<strong class="title">
+	<span>logo disgner</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+
+  <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/logos/5a9b14ec-688c-4b9f-8f85-c873285eabe8.jpg">
+	</div>
+	<div class="info">
+	<p class="category">AMA</p>
+		<strong class="title">
+	<span>logo disgner</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+
+  <div class="cards">
+  
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/logos/58c76c2a-5446-47b2-9341-1c7e52b6d7c2.jpg">
+	</div>
+	<div class="info">
+	<p class="category">eye modern design</p>
+	
+	<strong class="title">
+	<span>logo disgner</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+ 
+  <div class="cards">
+  
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/logos/c417c6e1-921f-4971-8ef9-d7c7f6ab0d8f.jpg">
+	</div>
+	<div class="info">
+	<p class="category">eye modern design</p>
+	
+	<strong class="title">
+	<span>logo disgner</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+	
+	  </div>
+	 <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/photo/61888d5a-4b02-4867-9632-7c9c8384a2f0.jpg">
+	</div>
+	<div class="info">
+	<p class="category"> drama shot</p>
+	
+	<strong class="title">
+	<span>photoshots</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+
+<div class="content">
+ <div class="cards">
+  <div class="cards-iamges">
+    <img style='width:300px;height:300px;' src="file:///C:/Users/Lenovo%20R/Desktop/too7/photo/47ab9e2c-5214-459e-b0e7-e8fde2577356.jpg">
+	</div>
+	<div class="info">
+	<p class="category">wintershot</p>
+	
+	<strong class="title">
+	<span>photoshots</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+  </div>
+  
+ <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/photo/14af447d-23a5-4018-a481-cd9187f97eec.jpg">
+	</div>
+	<div class="info">
+	<p class="category">sun shot</p>
+	
+	<strong class="title">
+	<span>photoshots</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+  
+   <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/photo/a8ea7f29-0d8c-4482-b6a6-4cdbfb19d31e.jpg">
+	</div>
+	<div class="info">
+	<p class="category">coolshot</p>
+	
+	<strong class="title">
+	<span>photoshots</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+  
+   <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/photo/3761c45a-15f3-410e-9d62-5ae80fb4f0f6.jpg">
+	</div>
+	<div class="info">
+	<p class="category">sun shot</p>
+	
+	<strong class="title">
+	<span>photoshots</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+	
+  </div>
+  
+
+  <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/editing/d8bd37cb-3e13-4ee2-b838-be249b5ed718.jpg">
+	</div>
+	<div class="info">
+	<p class="category">cool editing </p>
+	
+	<strong class="title">
+	<span>editing</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+   <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/editing/b27dc880-3db0-45e1-bc69-662f5a28872c.jpg">
+	</div>
+	<div class="info">
+	<p class="category">editing</p>
+	
+	<strong class="title">
+	<span>editing</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+  
+   <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/editing/072d7f50-27d2-4bef-b6a4-226e2a9e228e.jpg">
+	</div>
+	<div class="info">
+	<p class="category">nice time</p>
+	
+	<strong class="title">
+	<span>editing</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+
+   <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/editing/a80a6b30-c99f-40fb-8a84-1d57b8816806.jpg">
+	</div>
+	<div class="info">
+	<p class="category">nice time</p>
+	
+	<strong class="title">
+	<span>editing</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+     <div class="cards">
+  <div class="cards-iamges">
+    <img src="file:///C:/Users/Lenovo%20R/Desktop/too7/editing/43e4606a-2a67-4d4c-bfec-d815e0ea1ba3.jpg">
+	</div>
+	<div class="info">
+	<p class="category">nice time</p>
+	
+	<strong class="title">
+	<span>editing</span >
+	<a href="#" class="link">Open the image</a>
+	</strong>
+	</div>
+  </div>
+ 
+ </div>
+</section>
+
+<section class="contacts"  id="contacts">
+    <div class="contacts-title">
+	<h1>contacts</h1>
+	</div>
+   <div class="content">
+     <div class="cards">
+         <div class="contacts-icons"> 	
+           		<i class="fa fa-phone"></i> 
+         </div>
+		 <div class="num">
+		    <p>+20114801430</p>
+		 </div>
+     </div>
+	      <div class="cards">
+         <div class="contacts-icons"> 	
+           		<i class="fa fa-whatsapp"></i> 
+         </div>
+		 <div class="num">
+		    <p>0114801430</p>
+		 </div>
+     </div>
+	 	      <div class="cards">
+         <div class="contacts-icons"> 	
+           		<i class="fa fa-envelope"></i> 
+         </div>
+		 <div class="email">
+		    <p>hm2891548@gmail.com</p>
+		 </div>
+		 
+     </div>
+	 
+   </div>
+   
+</section>
+</body>
+</html>
